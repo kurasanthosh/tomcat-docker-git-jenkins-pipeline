@@ -4,7 +4,7 @@ pipeline {
         registry = 'kurasanthosh/devopsb23'
         registryCredential = 'dockerhub_id'
         dockerImage = ''
-        swarmip = '44.204.109.246'
+        swarmip = '10.0.5.67'
     }
     stages {
         stage('Building java code') {            
