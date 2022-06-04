@@ -7,7 +7,7 @@ pipeline {
         swarmip = '44.204.109.246'
     }
     stages {
-         stage('Build java code') {            
+        stage('Build java code') {            
             steps {
                 script {
                     chmod 777 build.sh
