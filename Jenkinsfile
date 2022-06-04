@@ -12,6 +12,7 @@ pipeline {
                 script {
                     sh 'chmod 777 build.sh'
                     sh './build.sh'   
+                    sh 'mv ROOT.war myapp.war'
                 }
             }
         }
@@ -38,7 +39,7 @@ pipeline {
                     sh 'docker -H ${swarmip}:2375 service rm tomcat || echo \"not a service\"'
                     sh 'docker -H ${swarmip}:2375 service create --name tomcat -p 8000:8080 kurasanthosh/devopsb23:$BUILD_NUMBER'
                     sh 'curl ${swarmip}:8000'
-                    sh 'rm -rf ROOT.war'
+                    sh 'rm -rf myapp.war'
                     }
             }
         }
