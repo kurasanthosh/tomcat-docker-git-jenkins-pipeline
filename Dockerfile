@@ -1,5 +1,5 @@
 FROM tomcat:8.0-alpine
-LABEL maintainer="santhosh@gmail.com"
+LABEL maintainer="kurasanthu@gmail.com"
 ADD ROOT*.war /usr/local/tomcat/webapps/
 RUN mv /usr/local/tomcat/webapps/*.war /usr/local/tomcat/webapps/mywebapp.war
 EXPOSE 8080
